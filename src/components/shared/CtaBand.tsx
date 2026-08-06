@@ -15,7 +15,7 @@ export function CtaBand() {
           residency requirement, and we will come back with what we can commit
           and when.
         </p>
-        <div className="cta-actions">
+        <div className="cta-actions justify-center md:justify-start">
           <Link className="btn btn-primary" href="/contact">
             Request capacity
           </Link>
