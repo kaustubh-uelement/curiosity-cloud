@@ -23,7 +23,7 @@ export function Hero() {
           <p className="lede">
             India&apos;s AI buildout is not short of chips. It is short of firm,
             clean, round-the-clock power. Curiosity contracts the energy, builds
-            the campuses, and runs the cloud on top — one company, one stack, one
+            the campuses, and runs the cloud on top, one company, one stack, one
             invoice.
           </p>
           <div className="hero-actions">

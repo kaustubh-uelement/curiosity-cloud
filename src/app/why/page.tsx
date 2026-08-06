@@ -35,7 +35,7 @@ export default function WhyPage() {
             </li>
             <li className="glass compare-us">
               <h3>Curiosity</h3>
-              <p>Owns the join — and the software that operates it.</p>
+              <p>Owns the join, and the software that operates it.</p>
             </li>
           </ul>
         </div>

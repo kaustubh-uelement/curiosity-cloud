@@ -13,7 +13,7 @@ export function EcosystemSection() {
           ))}
         </ul>
         <p className="fine">
-          Partner slots — to be replaced with named logos once agreements are
+          Partner slots: to be replaced with named logos once agreements are
           signed.
         </p>
       </div>

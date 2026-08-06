@@ -5,7 +5,7 @@ export const PAGES: Record<string, PageData> = {
   products: {
     eyebrow: "Products",
     title: "Four ways to take capacity",
-    lede: "Same campus, same power, same control plane. What changes is how much of the stack you want to hold — and how much of the operating burden you want to hand over.",
+    lede: "Same campus, same power, same control plane. What changes is how much of the stack you want to hold, and how much of the operating burden you want to hand over.",
     kind: "products-index",
   },
 
@@ -17,7 +17,7 @@ export const PAGES: Record<string, PageData> = {
     intro: {
       h: "Compute without the abstraction tax",
       p: [
-        "Most clouds hand you a virtual machine and keep the interesting parts to themselves. GPU Cloud gives you the node — the whole node, with direct access to the accelerators, the NICs and the local NVMe.",
+        "Most clouds hand you a virtual machine and keep the interesting parts to themselves. GPU Cloud gives you the node: the whole node, with direct access to the accelerators, the NICs and the local NVMe.",
         "That matters for training. A hypervisor layer costs you throughput you have already paid for, and it hides the failure signals you need to keep a multi-week run alive.",
       ],
     },
@@ -27,7 +27,7 @@ export const PAGES: Record<string, PageData> = {
       ["Automated node recovery", "Health checks drain and replace failing hosts, and the job resumes from checkpoint rather than from zero."],
       ["Carbon-aware scheduling", "Deferrable work can be placed into windows when the campus is running on its cleanest, cheapest supply."],
       ["Flexible commitment", "Hourly for experiments, reserved terms up to 36 months for production capacity you need guaranteed."],
-      ["Transparent power cost", "Energy is contracted upstream, not passed through at spot — so the rate you sign is the rate you pay."],
+      ["Transparent power cost", "Energy is contracted upstream, not passed through at spot; so the rate you sign is the rate you pay."],
     ],
     steps: [
       ["Tell us the shape", "Accelerator count, expected duration, residency requirement, and whether the workload is interruptible."],
@@ -47,7 +47,7 @@ export const PAGES: Record<string, PageData> = {
     faq: [
       ["Can I bring my own orchestration?", "Yes. The nodes are yours at the metal, so Slurm, Kubernetes or your own scheduler all work. We can also run the orchestration layer for you."],
       ["What happens when a node fails mid-run?", "Health monitoring drains the host, replaces it from the pool and resumes the job from your most recent checkpoint. You are not billed for the failed interval."],
-      ["Is capacity guaranteed on hourly pricing?", "No — hourly is best-effort against available pool. If you need capacity guaranteed at a specific date, take a reserved term."],
+      ["Is capacity guaranteed on hourly pricing?", "No. Hourly is best-effort against available pool. If you need capacity guaranteed at a specific date, take a reserved term."],
     ],
   },
 
@@ -60,7 +60,7 @@ export const PAGES: Record<string, PageData> = {
       h: "Isolation you can point at",
       p: [
         "For a lot of workloads, logical isolation is not the isolation the compliance team asked about. Private AI Cloud gives you physically separate racks in a defined hall, with your own network segment and your own key material.",
-        "We run the operations. You keep the controls — identity, encryption keys, access policy and the audit trail.",
+        "We run the operations. You keep the controls: identity, encryption keys, access policy and the audit trail.",
       ],
     },
     features: [
@@ -88,7 +88,7 @@ export const PAGES: Record<string, PageData> = {
     ],
     faq: [
       ["Who can physically access the racks?", "Named Curiosity operations staff under logged access control. The access record is part of what you can audit."],
-      ["Can we run our own security tooling inside?", "Yes. The environment is yours logically — agents, scanners and policy tooling are all supported."],
+      ["Can we run our own security tooling inside?", "Yes. The environment is yours logically: agents, scanners and policy tooling are all supported."],
       ["What is the minimum size?", "Private tenancy is sized by hall, so there is a practical floor. If your requirement is smaller, managed infrastructure or GPU Cloud is usually the better fit."],
     ],
   },
@@ -144,7 +144,7 @@ export const PAGES: Record<string, PageData> = {
       h: "The highest layer of the stack",
       p: [
         "Not every team wants to think about racks. Inference & Training is a managed service: you point at an endpoint or submit a job, and the capacity underneath is ours to worry about.",
-        "Because we own the generation as well as the compute, deferrable work can be scheduled into the cleanest and cheapest hours automatically — which is a saving you cannot make when you rent someone else\u0027s cloud.",
+        "Because we own the generation as well as the compute, deferrable work can be scheduled into the cleanest and cheapest hours automatically, which is a saving you cannot make when you rent someone else's cloud.",
       ],
     },
     features: [
@@ -173,7 +173,7 @@ export const PAGES: Record<string, PageData> = {
     faq: [
       ["Is my model isolated from other tenants?", "Serving runs in an isolated runtime. If you need physical isolation as well, that is Private AI Cloud."],
       ["What does interruptible actually mean?", "We may pause and resume the job to move it into a better power window. You get a cheaper rate; you do not get a fixed completion time."],
-      ["Can I mix this with reserved capacity?", "Yes — a common pattern is reserved capacity for serving and pooled interruptible capacity for training."],
+      ["Can I mix this with reserved capacity?", "Yes. A common pattern is reserved capacity for serving and pooled interruptible capacity for training."],
     ],
   },
 
@@ -208,7 +208,7 @@ export const PAGES: Record<string, PageData> = {
       ["Corridors", "Mumbai · Chennai · Hyderabad", "Planned"],
     ],
     faq: [
-      ["Is this genuinely 24×7 clean, or annual matching?", "The target is hourly matched round-the-clock supply, firmed with storage — not annual REC netting. Where a shortfall is covered from the grid, it is reported as such."],
+      ["Is this genuinely 24×7 clean, or annual matching?", "The target is hourly matched round-the-clock supply, firmed with storage, not annual REC netting. Where a shortfall is covered from the grid, it is reported as such."],
       ["What happens if tariff regulation changes?", "Our models are stress-tested against removal of waivers and concessions. We build on the mechanism, not on the concession."],
       ["Do you sell energy separately?", "Curiosity Energy contracts clean supply to data centres as its own business. Curiosity Cloud is its largest customer."],
     ],
@@ -223,7 +223,7 @@ export const PAGES: Record<string, PageData> = {
     intro: {
       h: "Density is a day-zero decision",
       p: [
-        "Current-generation accelerator racks have already passed what air cooling supports. A hall designed for air and retrofitted later is not an upgrade — it is a write-off with extra steps.",
+        "Current-generation accelerator racks have already passed what air cooling supports. A hall designed for air and retrofitted later is not an upgrade. It is a write-off with extra steps.",
         "We design liquid-cooled from the start, and we specify the network fabric alongside the power design rather than after it, because a training run throttled at the interconnect wastes capacity you have already contracted.",
       ],
     },
@@ -245,7 +245,7 @@ export const PAGES: Record<string, PageData> = {
     ],
     faq: [
       ["When does the first campus energise?", "The reference deployment lands on a leased powered facility first; the first greenfield campus is targeted in the 12–24 month phase. See the roadmap."],
-      ["Can you host our own hardware?", "Yes — that is Managed AI Infrastructure. Same halls, same power, same operations."],
+      ["Can you host our own hardware?", "Yes. That is Managed AI Infrastructure. Same halls, same power, same operations."],
       ["How is heat handled?", "Direct-to-chip capture with a designed rejection path. Heat reuse is under evaluation and not yet committed."],
     ],
   },
@@ -255,7 +255,7 @@ export const PAGES: Record<string, PageData> = {
     eyebrow: "Platform · Layer 03",
     title: "Control plane",
     accent: "#0EA5E9",
-    lede: "One system spanning generation, storage, campus and compute — deciding what runs where, when, and at what carbon.",
+    lede: "One system spanning generation, storage, campus and compute, deciding what runs where, when, and at what carbon.",
     intro: {
       h: "The seam nobody else owns",
       p: [

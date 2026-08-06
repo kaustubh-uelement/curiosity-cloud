@@ -14,7 +14,7 @@ export function WorkloadsSection() {
           <h2>Designed for AI workloads, priced on our own power</h2>
           <p className="section-lede">
             Most providers start where the rack begins. We start where the
-            electron does — which is why the number on the contract holds.
+            electron does, which is why the number on the contract holds.
           </p>
         </div>
         <div className="wl-layout">
