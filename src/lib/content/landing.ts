@@ -26,7 +26,7 @@ export const NEWS: NewsItem[] = [
   {
     tag: "Energy",
     title: "Firming renewables into a contractable 24×7 product",
-    body: "Solar is variable. Training loads are not. Storage is what turns one into the other — and what makes the PPA bankable.",
+    body: "Solar is variable. Training loads are not. Storage is what turns one into the other, and what makes the PPA bankable.",
     to: "platform/energy",
     cta: "How the energy works",
   },
@@ -37,7 +37,7 @@ export const PILLARS: Pillar[] = [
     k: "01",
     t: "Energy",
     to: "platform/energy",
-    d: "We contract and firm our own clean power — utility-scale solar and wind, storage for round-the-clock delivery, and grid interconnection secured before a rack is ordered.",
+    d: "We contract and firm our own clean power: utility-scale solar and wind, storage for round-the-clock delivery, and grid interconnection secured before a rack is ordered.",
     tint: "#F59E0B",
     ink: "#B45309",
   },
@@ -70,7 +70,7 @@ export const PILLAR_VALUES: PillarValue[] = [
   ],
   [
     "Any workload, any tenancy",
-    "Shared cloud, single-tenant private, or your own silicon in our halls — same campus, same control plane.",
+    "Shared cloud, single-tenant private, or your own silicon in our halls; same campus, same control plane.",
   ],
   [
     "Elastic at every stage",
@@ -103,7 +103,7 @@ export const WORKLOAD_BLOCKS: WorkloadBlock[] = [
     head: "Run the whole stack as one system",
     points: [
       "Dispatch, thermal control, cluster health and node recovery share a single control plane with the energy assets.",
-      "Deferrable work shifts into clean, low-tariff windows automatically — with per-workload attestation you can hand to an auditor.",
+      "Deferrable work shifts into clean, low-tariff windows automatically, with per-workload attestation you can hand to an auditor.",
     ],
   },
 ];

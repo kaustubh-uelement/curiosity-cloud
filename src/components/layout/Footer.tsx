@@ -18,7 +18,7 @@ export function Footer() {
             />
           </div>
           <p className="foot-note">
-            Part of Curiosity — Energy, AI and Cloud. The infrastructure layer
+            Part of Curiosity: Energy, AI and Cloud. The infrastructure layer
             for India&apos;s AI economy.
           </p>
         </div>

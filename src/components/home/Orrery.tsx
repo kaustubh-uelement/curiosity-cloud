@@ -53,7 +53,7 @@ export function Orrery({ activeId, onSelect }: OrreryProps) {
                   onMouseEnter={() => onSelect(b.id)}
                   onFocus={() => onSelect(b.id)}
                   onClick={() => onSelect(b.id)}
-                  aria-label={`${b.name} — ${b.line}`}
+                  aria-label={`${b.name}: ${b.line}`}
                   aria-pressed={active}
                 >
                   <span className="body-dot" />

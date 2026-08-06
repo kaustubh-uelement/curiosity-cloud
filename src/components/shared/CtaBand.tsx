@@ -11,8 +11,8 @@ export function CtaBand() {
           and when you need it live.
         </h2>
         <p className="cta-lede">
-          Send the shape of the workload — accelerator count, duration,
-          residency requirement — and we will come back with what we can commit
+          Send the shape of the workload: accelerator count, duration,
+          residency requirement, and we will come back with what we can commit
           and when.
         </p>
         <div className="cta-actions">
