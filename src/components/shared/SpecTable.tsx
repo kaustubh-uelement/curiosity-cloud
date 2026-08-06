@@ -11,6 +11,7 @@ export function SpecTable({ rows, caption }: SpecTableProps) {
     <div className="instrument-shell glass">
       <table className="instrument">
         <caption className="sr-only">{caption || "Specification"}</caption>
+
         <thead>
           <tr>
             <th scope="col">Parameter</th>
@@ -18,13 +19,14 @@ export function SpecTable({ rows, caption }: SpecTableProps) {
             <th scope="col">Status</th>
           </tr>
         </thead>
+
         <tbody>
-          {rows.map(([k, v, s]) => (
-            <tr key={k}>
-              <th scope="row">{k}</th>
-              <td>{v}</td>
+          {rows.map(([parameter, value, status], index) => (
+            <tr key={`${parameter}-${index}`}>
+              <th scope="row">{parameter}</th>
+              <td>{value}</td>
               <td>
-                <Status s={s} />
+                <Status s={status} />
               </td>
             </tr>
           ))}
