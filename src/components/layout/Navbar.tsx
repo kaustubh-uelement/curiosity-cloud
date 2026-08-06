@@ -9,10 +9,14 @@ import Image from "next/image";
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [desktopMenu, setDesktopMenu] = useState<
+    "products" | "platform" | null
+  >(null);
 
   // Close mobile menu on route change
   useEffect(() => {
     setOpen(false);
+    setDesktopMenu(null);
   }, [pathname]);
 
   const route = pathname.replace(/^\//, "").replace(/\/$/, "");
@@ -31,32 +35,56 @@ export function Navbar() {
       </Link>
 
       <nav className="nav-main" aria-label="Primary">
-        <div className="menu">
+        <div
+          className={`menu ${desktopMenu === "products" ? "is-open" : ""}`}
+          onMouseEnter={() => setDesktopMenu("products")}
+          onMouseLeave={() => setDesktopMenu(null)}
+          onFocus={() => setDesktopMenu("products")}
+        >
           <Link
-            className={`menu-top${route.startsWith("products") ? " is-active" : ""}`}
+            className={`menu-top${
+              route.startsWith("products") ? " is-active" : ""
+            }`}
             href="/products"
           >
             Products
           </Link>
+
           <div className="menu-panel glass">
             {NAV_PRODUCTS.map((item) => (
-              <Link key={item.slug} href={`/${item.slug}`}>
+              <Link
+                key={item.slug}
+                href={`/${item.slug}`}
+                onClick={() => setDesktopMenu(null)}
+              >
                 <strong>{item.name}</strong>
                 <span>{item.description}</span>
               </Link>
             ))}
           </div>
         </div>
-        <div className="menu">
+        <div
+          className={`menu ${desktopMenu === "platform" ? "is-open" : ""}`}
+          onMouseEnter={() => setDesktopMenu("platform")}
+          onMouseLeave={() => setDesktopMenu(null)}
+          onFocus={() => setDesktopMenu("platform")}
+        >
           <Link
-            className={`menu-top${route.startsWith("platform") ? " is-active" : ""}`}
+            className={`menu-top${
+              route.startsWith("platform") ? " is-active" : ""
+            }`}
             href="/platform/energy"
           >
             Platform
           </Link>
+
           <div className="menu-panel glass">
             {NAV_PLATFORM.map((item) => (
-              <Link key={item.slug} href={`/${item.slug}`}>
+              <Link
+                key={item.slug}
+                href={`/${item.slug}`}
+                onClick={() => setDesktopMenu(null)}
+              >
                 <strong>{item.name}</strong>
                 <span>{item.description}</span>
               </Link>

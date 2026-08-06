@@ -449,6 +449,16 @@ body > .nav {
 .menu {
   position: relative;
 }
+.menu::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -8px;
+  width: 330px;
+  height: 10px;
+  background: transparent;
+  pointer-events: auto;
+}
 .menu-top {
   display: inline-block;
   padding: 8px 12px;
@@ -495,11 +505,14 @@ body > .nav {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
-.menu:hover .menu-panel,
-.menu:focus-within .menu-panel {
+.menu.is-open .menu-panel {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translateY(0);
+}
+.menu-panel {
+  pointer-events: none;
 }
 .menu-panel a {
   display: flex;
