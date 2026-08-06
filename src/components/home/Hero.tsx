@@ -56,7 +56,7 @@ export function Hero() {
           </div>
         </div>
         <div className="hero-orrery">
-          <Orrery activeId={activeId} onSelect={select} />
+          <Orrery />
           <p className="orrery-hint mono">Choose a body to read its brief</p>
         </div>
       </div>
