@@ -8,9 +8,9 @@ const GALAXY = {
   count: 500000,
   size: 0.012,
   radius: 25,
-  branches: 4, // number of spiral arms — was 3
+  branches: 3, // number of spiral arms — was 3
   spin: 1,
-  randomness: 0.45,
+  randomness: 0.65,
   randomnessPower: 3,
   // >1 pulls more points toward the center (1 = uniform, 3+ = very core-heavy)
   centerBias: 2.2,
@@ -22,6 +22,26 @@ const GALAXY = {
 const CAMERA = {
   distance: 4.2, // lower = more zoomed in, higher = further away
   angleDeg: 18, // elevation angle above the galaxy plane — the "eagle's eye" tilt
+};
+
+/** Radial fade so the canvas dissolves into the page instead of hard-cutting at its box */
+const FADE = {
+  innerStop: "30%", // fully opaque out to this radius (% of its own size)
+  outerStop: "65%", // fully transparent by this radius — raise for a slower fade
+};
+
+/**
+ * Orrery now positions itself directly against the <section>, not a column
+ * inside hero-grid — that's what lets it spill past the right-hand box.
+ *   anchorX/Y — where the galaxy's center sits, as a % of the section's size
+ *   size      — its base diameter (in vmin, so it scales with viewport)
+ *   overflow  — multiplier on `size` for how far past that footprint it renders
+ */
+const LAYOUT = {
+  anchorX: "74%",
+  anchorY: "48%",
+  size: "68vmin",
+  overflow: 1.7,
 };
 
 function buildGalaxy() {
@@ -143,12 +163,27 @@ export function Orrery() {
     };
   }, []);
 
+  const fadeMask = `radial-gradient(circle at center, black ${FADE.innerStop}, transparent ${FADE.outerStop})`;
+  const renderedSize = `calc(${LAYOUT.size} * ${LAYOUT.overflow})`;
+
   return (
+    // Positions against the nearest positioned ancestor — must be the <section>
+    // itself (give it position: relative), not a column div, so this can overflow.
     <div
       ref={containerRef}
-      className="galaxy-orrery"
-      style={{ width: "100%", aspectRatio: "1 / 1", pointerEvents: "none" }}
       aria-hidden="true"
+      style={{
+        position: "absolute",
+        top: LAYOUT.anchorY,
+        left: LAYOUT.anchorX,
+        width: renderedSize,
+        height: renderedSize,
+        transform: "translate(-50%, -50%)",
+        pointerEvents: "none",
+        zIndex: 0,
+        WebkitMaskImage: fadeMask,
+        maskImage: fadeMask,
+      }}
     />
   );
 }

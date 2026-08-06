@@ -1,20 +1,28 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { BODIES } from "@/lib/content/bodies";
 import { StarChart } from "@/components/shared/StarChart";
 import { Orrery } from "./Orrery";
 
 export function Hero() {
-  const [activeId, setActiveId] = useState("C-I");
+  const [activeId] = useState("C-I");
   const active = BODIES.find((b) => b.id === activeId) || BODIES[0];
-  const select = useCallback((id: string) => setActiveId(id), []);
 
   return (
-    <section className="hero">
+    // position: relative + overflow: visible are required — Orrery anchors
+    // against this element and needs to be allowed to spill past its edges.
+    <section
+      className="hero"
+      style={{ position: "relative", overflow: "visible" }}
+    >
       <StarChart />
-      <div className="hero-grid inner">
+      <Orrery />
+      <div
+        className="hero-grid inner"
+        style={{ position: "relative", zIndex: 1 }}
+      >
         <div className="hero-copy">
           <p className="eyebrow mono">Curiosity · Energy · AI · Cloud</p>
           <h1>
@@ -54,10 +62,6 @@ export function Hero() {
               Explore {active.name} <span aria-hidden="true">→</span>
             </Link>
           </div>
-        </div>
-        <div className="hero-orrery">
-          <Orrery />
-          <p className="orrery-hint mono">Choose a body to read its brief</p>
         </div>
       </div>
     </section>
