@@ -18,7 +18,15 @@ export function Hero() {
       style={{ position: "relative", overflow: "visible" }}
     >
       <StarChart />
-      <Orrery />
+
+      {/* Orrery only shows from md up to (not including) xl — hidden on
+          mobile AND hidden on desktop. Swap the breakpoint prefixes below
+          to move the window (e.g. lg:hidden instead of xl:hidden to cut
+          it off earlier). */}
+      <div className="hidden md:block">
+        <Orrery />
+      </div>
+
       <div
         className="hero-grid inner"
         style={{ position: "relative", zIndex: 1 }}
