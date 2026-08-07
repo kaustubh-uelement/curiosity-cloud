@@ -16,10 +16,21 @@ const GALAXY = {
   // push it much higher and too many of the 500k points pile onto the same
   // spot, saturating into a white blob under additive blending.
   centerBias: 1.2,
-  insideColor: "#8a5cf6", // core
-  midColor: "#8a5cf6", // purple, roughly mid-arm
-  outsideColor: "#3a4d9e", // arm tips
 };
+
+/**
+ * Color gradient along the galaxy's radius, as a list of stops from center (0)
+ * to edge (1). Add, remove, or reorder stops for full control — not locked to
+ * a fixed inside/mid/outside trio anymore. Colors between stops are linearly
+ * interpolated, so e.g. adding a 3rd stop at `{ at: 0.5, color: "..." }` gives
+ * you a visible band at the halfway point.
+ */
+const COLOR_STOPS: { at: number; color: string }[] = [
+  { at: 0, color: "#3561e2" }, // matches --amber as rendered
+  { at: 0.32, color: "#346cdd" }, // matches --terra as rendered
+  { at: 0.62, color: "#377bc7" }, // matches --magenta as rendered
+  { at: 1, color: "#3d8bb4" }, // matches --purple as rendered
+];
 
 /** Fixed viewing camera — no orbit controls, just these two knobs */
 const CAMERA = {
@@ -47,16 +58,25 @@ const LAYOUT = {
   overflow: 1.7,
 };
 
-/** 3-stop gradient: orange core -> purple mid-arm -> blue tips, instead of a flat 2-stop lerp */
+/** Walks COLOR_STOPS and linearly interpolates between whichever two bracket `mix` */
 function galaxyColorAt(mix: number) {
-  const inside = new THREE.Color(GALAXY.insideColor);
-  const mid = new THREE.Color(GALAXY.midColor);
-  const outside = new THREE.Color(GALAXY.outsideColor);
+  const stops = COLOR_STOPS;
 
-  if (mix < 0.5) {
-    return inside.clone().lerp(mid, mix / 0.5);
+  if (mix <= stops[0].at) return new THREE.Color(stops[0].color);
+  if (mix >= stops[stops.length - 1].at) {
+    return new THREE.Color(stops[stops.length - 1].color);
   }
-  return mid.clone().lerp(outside, (mix - 0.5) / 0.5);
+
+  for (let i = 0; i < stops.length - 1; i++) {
+    const a = stops[i];
+    const b = stops[i + 1];
+    if (mix >= a.at && mix <= b.at) {
+      const t = (mix - a.at) / (b.at - a.at);
+      return new THREE.Color(a.color).lerp(new THREE.Color(b.color), t);
+    }
+  }
+
+  return new THREE.Color(stops[stops.length - 1].color);
 }
 
 function buildGalaxy() {
