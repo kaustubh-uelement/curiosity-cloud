@@ -6,21 +6,24 @@ import * as THREE from "three";
 /** Same knobs as the reference generator — tune count/randomness for density */
 const GALAXY = {
   count: 500000,
-  size: 0.012,
-  radius: 25,
-  branches: 3, // number of spiral arms — was 3
-  spin: 1,
-  randomness: 0.65,
-  randomnessPower: 3,
-  // >1 pulls more points toward the center (1 = uniform, 3+ = very core-heavy)
-  centerBias: 2.2,
-  insideColor: "#ff8a4c",
-  outsideColor: "#3a4d9e",
+  size: 0.007,
+  radius: 20,
+  branches: 3,
+  spin: 5,
+  randomness: 0.75,
+  randomnessPower: 4.5,
+  // >1 pulls more points toward the center (1 = uniform). Keep this modest —
+  // push it much higher and too many of the 500k points pile onto the same
+  // spot, saturating into a white blob under additive blending.
+  centerBias: 1.2,
+  insideColor: "#8a5cf6", // core
+  midColor: "#8a5cf6", // purple, roughly mid-arm
+  outsideColor: "#3a4d9e", // arm tips
 };
 
 /** Fixed viewing camera — no orbit controls, just these two knobs */
 const CAMERA = {
-  distance: 4.2, // lower = more zoomed in, higher = further away
+  distance: 1.8, // lower = more zoomed in, higher = further away
   angleDeg: 18, // elevation angle above the galaxy plane — the "eagle's eye" tilt
 };
 
@@ -31,7 +34,7 @@ const FADE = {
 };
 
 /**
- * Orrery now positions itself directly against the <section>, not a column
+ * Orrery positions itself directly against the <section>, not a column
  * inside hero-grid — that's what lets it spill past the right-hand box.
  *   anchorX/Y — where the galaxy's center sits, as a % of the section's size
  *   size      — its base diameter (in vmin, so it scales with viewport)
@@ -44,13 +47,22 @@ const LAYOUT = {
   overflow: 1.7,
 };
 
+/** 3-stop gradient: orange core -> purple mid-arm -> blue tips, instead of a flat 2-stop lerp */
+function galaxyColorAt(mix: number) {
+  const inside = new THREE.Color(GALAXY.insideColor);
+  const mid = new THREE.Color(GALAXY.midColor);
+  const outside = new THREE.Color(GALAXY.outsideColor);
+
+  if (mix < 0.5) {
+    return inside.clone().lerp(mid, mix / 0.5);
+  }
+  return mid.clone().lerp(outside, (mix - 0.5) / 0.5);
+}
+
 function buildGalaxy() {
   const geometry = new THREE.BufferGeometry();
   const positions = new Float32Array(GALAXY.count * 3);
   const colors = new Float32Array(GALAXY.count * 3);
-
-  const colorInside = new THREE.Color(GALAXY.insideColor);
-  const colorOutside = new THREE.Color(GALAXY.outsideColor);
 
   for (let i = 0; i < GALAXY.count; i++) {
     const i3 = i * 3;
@@ -80,8 +92,7 @@ function buildGalaxy() {
     positions[i3 + 1] = randomY;
     positions[i3 + 2] = Math.sin(branchAngle + spinAngle) * radius + randomZ;
 
-    const mixedColor = colorInside.clone();
-    mixedColor.lerp(colorOutside, radius / GALAXY.radius);
+    const mixedColor = galaxyColorAt(radius / GALAXY.radius);
 
     colors[i3] = mixedColor.r;
     colors[i3 + 1] = mixedColor.g;
