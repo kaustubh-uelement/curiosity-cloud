@@ -11,21 +11,19 @@ export function Hero() {
   const active = BODIES.find((b) => b.id === activeId) || BODIES[0];
 
   return (
-    // position: relative + overflow: visible are required — Orrery anchors
-    // against this element and needs to be allowed to spill past its edges.
+    // Orrery is still allowed to bleed past its own anchor box (that's the
+    // whole point), but overflow is "hidden" here, not "visible" — this
+    // section spans the full page width, so leaving it "visible" let the
+    // galaxy's rendered size (which gets wide on narrow viewports) actually
+    // grow the page's scrollable width. Clipping at the section edge = clipping
+    // at the screen edge, which is what we actually want.
     <section
       className="hero"
-      style={{ position: "relative", overflow: "visible" }}
+      style={{ position: "relative", overflow: "hidden" }}
     >
       <StarChart />
 
-      {/* Orrery only shows from md up to (not including) xl — hidden on
-          mobile AND hidden on desktop. Swap the breakpoint prefixes below
-          to move the window (e.g. lg:hidden instead of xl:hidden to cut
-          it off earlier). */}
-      <div className="hidden md:block">
-        <Orrery />
-      </div>
+      <Orrery />
 
       <div
         className="hero-grid inner"
