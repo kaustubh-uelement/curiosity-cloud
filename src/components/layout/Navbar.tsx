@@ -26,7 +26,7 @@ export function Navbar() {
     <header className="nav glass">
       <Link className="" href="/">
         <Image
-          src="/curiosity-cloud.png"
+          src="/curiosity.png"
           alt="Curiosity Cloud"
           width={180}
           height={40}

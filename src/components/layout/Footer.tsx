@@ -10,7 +10,7 @@ export function Footer() {
         <div className="foot-brand-col">
           <div className="foot-brand">
             <Image
-              src="/curiosity-cloud.png"
+              src="/curiosity.png"
               alt="Curiosity Cloud"
               width={180}
               height={40}
