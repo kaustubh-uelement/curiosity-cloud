@@ -1969,7 +1969,6 @@ body > .nav {
 @media (max-width: 640px) {
   .nav {
     gap: 10px;
-    margin: 10px 12px;
     padding: 11px 14px;
     border-radius: 0px;
   }
