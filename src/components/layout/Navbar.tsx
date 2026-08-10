@@ -26,7 +26,7 @@ export function Navbar() {
     <header className="nav glass">
       <Link className="" href="/">
         <Image
-          src="/curiosity-cloud-full.png"
+          src="/curiosity-cloud.png"
           alt="Curiosity Cloud"
           width={180}
           height={40}
@@ -110,7 +110,7 @@ export function Navbar() {
 
       <div className="nav-actions">
         <Link className="nav-link" href="/contact">
-          Contact sales
+          Contact
         </Link>
         <Link className="btn btn-primary nav-cta" href="/contact">
           Request capacity

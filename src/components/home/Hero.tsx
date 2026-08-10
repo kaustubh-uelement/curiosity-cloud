@@ -2,28 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { BODIES } from "@/lib/content/bodies";
 import { StarChart } from "@/components/shared/StarChart";
-import { Orrery } from "./Orrery";
 
 export function Hero() {
   const [activeId] = useState("C-I");
   const active = BODIES.find((b) => b.id === activeId) || BODIES[0];
 
   return (
-    // Orrery is still allowed to bleed past its own anchor box (that's the
-    // whole point), but overflow is "hidden" here, not "visible" — this
-    // section spans the full page width, so leaving it "visible" let the
-    // galaxy's rendered size (which gets wide on narrow viewports) actually
-    // grow the page's scrollable width. Clipping at the section edge = clipping
-    // at the screen edge, which is what we actually want.
-    <section
-      className="hero"
-      style={{ position: "relative", overflow: "hidden" }}
-    >
+    <section className="hero" style={{ position: "relative" }}>
       <StarChart />
-
-      <Orrery />
 
       <div
         className="hero-grid inner"
@@ -48,6 +37,30 @@ export function Hero() {
               Why Curiosity
             </Link>
           </div>
+
+          {/* Mobile/tablet only — sits above the readout card here. Switches
+              at 1080px to match .hero-grid's actual column collapse point in
+              globals.css, not Tailwind's md (768px) — otherwise there's a
+              gap where the "desktop" image shows but the grid is still
+              single-column. */}
+          <div
+            className="block min-[1081px]:hidden"
+            style={{
+              position: "relative",
+              width: "100%",
+              aspectRatio: "1 / 1",
+              margin: "20px 0",
+            }}
+          >
+            <Image
+              src="/curiosity-cloud-hero.png"
+              alt="Curiosity Cloud"
+              fill
+              style={{ objectFit: "contain" }}
+              priority
+            />
+          </div>
+
           <div className="readout glass" aria-live="polite">
             <div className="readout-head">
               <span className="mono readout-id" style={{ color: active.text }}>
@@ -68,6 +81,19 @@ export function Hero() {
               Explore {active.name} <span aria-hidden="true">→</span>
             </Link>
           </div>
+        </div>
+
+        <div
+          className="hidden min-[1081px]:block"
+          style={{ position: "relative", width: "100%", aspectRatio: "1 / 1" }}
+        >
+          <Image
+            src="/curiosity-cloud-hero.png"
+            alt="Curiosity Cloud"
+            fill
+            style={{ objectFit: "contain" }}
+            priority
+          />
         </div>
       </div>
     </section>
