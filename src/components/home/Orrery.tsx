@@ -53,7 +53,7 @@ const FADE = {
  */
 const LAYOUT = {
   anchorX: "74%",
-  anchorY: "48%",
+  anchorY: "18%",
   size: "68vmin",
   overflow: 1.7,
 };

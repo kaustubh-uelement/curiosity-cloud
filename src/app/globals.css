@@ -200,7 +200,7 @@ summary:focus-visible {
   align-items: center;
   justify-content: center;
   padding: 14px 28px;
-  border-radius: 12px;
+  border-radius: 9999px;
   font-size: 14.5px;
   font-weight: 600;
   font-family: var(--font-poppins);
@@ -410,8 +410,8 @@ body > .nav {
   align-items: center;
   gap: 26px;
   padding: 12px clamp(14px, 2.4vw, 26px);
-  margin: 14px clamp(14px, 3vw, 40px);
-  border-radius: 18px;
+  margin: 0;
+  border-radius: 0;
   background: var(--glass-bg-strong);
 }
 .wordmark {
@@ -483,7 +483,7 @@ body > .nav {
   left: -8px;
   width: 330px;
   padding: 9px;
-  border-radius: 15px;
+  border-radius: 0px;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -519,7 +519,7 @@ body > .nav {
   flex-direction: column;
   gap: 2px;
   padding: 10px 12px;
-  border-radius: 10px;
+  border-radius: 0px;
   transition: background 0.18s;
 }
 .menu-panel a:hover {
@@ -577,7 +577,7 @@ body > .nav {
   left: 0;
   right: 0;
   padding: 16px 18px 20px;
-  border-radius: 16px;
+  border-radius: 0px;
   background: #ffffff;
   border: 1px solid var(--hair);
   box-shadow: 0 20px 48px -16px rgba(12, 18, 38, 0.3);
@@ -602,7 +602,7 @@ body > .nav {
   padding: 9px 6px;
   font-size: 14.5px;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 0px;
 }
 .mobile-menu a:hover {
   background: rgba(109, 40, 217, 0.07);
@@ -652,7 +652,7 @@ body > .nav {
 .readout {
   margin-top: 30px;
   padding: 20px 22px 18px;
-  border-radius: 16px;
+  border-radius: 0px;
   max-width: 540px;
 }
 .readout-head {
@@ -946,7 +946,7 @@ body > .nav {
 }
 .news-card {
   padding: 24px 24px 26px;
-  border-radius: 18px;
+  border-radius: 0px;
   display: flex;
   flex-direction: column;
   gap: 11px;
@@ -1041,7 +1041,7 @@ body > .nav {
 }
 .pillar {
   padding: 26px 26px 28px;
-  border-radius: 18px;
+  border-radius: 0px;
   position: relative;
   overflow: hidden;
   transition:
@@ -1152,7 +1152,7 @@ body > .nav {
 }
 .svc {
   padding: 26px 24px 26px;
-  border-radius: 18px;
+  border-radius: 0px;
   position: relative;
   overflow: hidden;
   transition:
@@ -1301,7 +1301,7 @@ body > .nav {
   gap: 10px;
 }
 .faq details {
-  border-radius: 14px;
+  border-radius: 0px;
   overflow: hidden;
 }
 .faq summary {
@@ -1331,7 +1331,7 @@ body > .nav {
   content: "";
   position: absolute;
   background: var(--purple);
-  border-radius: 2px;
+  border-radius: 0px;
   transition: transform 0.2s;
 }
 .faq-mark::before {
@@ -1424,7 +1424,7 @@ body > .nav {
 }
 .wl-stat {
   padding: 32px 28px;
-  border-radius: 20px;
+  border-radius: 0px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1456,7 +1456,7 @@ body > .nav {
 }
 .values li {
   padding: 24px 22px 26px;
-  border-radius: 16px;
+  border-radius: 0px;
   transition: transform 0.22s;
 }
 .values li:hover {
@@ -1485,7 +1485,7 @@ body > .nav {
   gap: 20px;
   align-items: center;
   padding: 20px 24px;
-  border-radius: 14px;
+  border-radius: 0px;
 }
 .compare h3 {
   font-size: 17px;
@@ -1557,7 +1557,7 @@ body > .nav {
  *  Instrument (spec table)
  * ================================================================== */
 .instrument-shell {
-  border-radius: 20px;
+  border-radius: 0px;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -1623,7 +1623,7 @@ body > .nav {
 }
 .who-grid li {
   padding: 24px 22px 26px;
-  border-radius: 16px;
+  border-radius: 0px;
   transition: transform 0.22s;
 }
 .who-grid li:hover {
@@ -1743,7 +1743,7 @@ body > .nav {
 }
 .contact-card {
   padding: 30px 28px;
-  border-radius: 20px;
+  border-radius: 0px;
   position: sticky;
   top: 96px;
 }
@@ -1783,7 +1783,7 @@ body > .nav {
     clamp(48px, 5.5vw, 86px);
 }
 .cta-inner {
-  border-radius: 28px;
+  border-radius: 0px;
   padding: clamp(42px, 5.5vw, 80px) clamp(28px, 4.5vw, 64px);
   background: linear-gradient(
     118deg,
@@ -1968,7 +1968,7 @@ body > .nav {
     gap: 10px;
     margin: 10px 12px;
     padding: 11px 14px;
-    border-radius: 15px;
+    border-radius: 0px;
   }
   .wordmark {
     font-size: 15px;
@@ -2029,7 +2029,7 @@ body > .nav {
     min-width: 0;
     padding: 17px 10px 18px;
     border: 1px solid var(--hair-soft);
-    border-radius: 14px;
+    border-radius: 0px;
     background: rgba(255, 255, 255, 0.28);
     text-align: center;
   }

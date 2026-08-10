@@ -45,7 +45,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a href="#main" className="skip">
           Skip to content
         </a>
-        <AnnouncementBar />
         <Navbar />
         <main id="main">{children}</main>
         <Footer />
