@@ -44,7 +44,7 @@ export function Hero() {
               gap where the "desktop" image shows but the grid is still
               single-column. */}
           <div
-            className="block min-[1081px]:hidden"
+            className="block min-[769px]:hidden"
             style={{
               position: "relative",
               width: "100%",
@@ -84,8 +84,13 @@ export function Hero() {
         </div>
 
         <div
-          className="hidden min-[1081px]:block"
-          style={{ position: "relative", width: "100%", aspectRatio: "1 / 1" }}
+          className="hidden min-[769px]:block"
+          style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "1 / 1",
+            marginTop: "-180px",
+          }}
         >
           <Image
             src="/curiosity-cloud-hero.png"
