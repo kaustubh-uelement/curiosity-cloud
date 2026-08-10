@@ -106,15 +106,12 @@ export function Navbar() {
         <Link className={`menu-top${on("roadmap")}`} href="/roadmap">
           Roadmap
         </Link>
+        <Link className={`menu-top${on("contact")}`} href="/contact">
+          Contact
+        </Link>
       </nav>
 
       <div className="nav-actions">
-        <Link className="nav-link" href="/contact">
-          Contact
-        </Link>
-        <Link className="btn btn-primary nav-cta" href="/contact">
-          Request capacity
-        </Link>
         <button
           type="button"
           className="burger"

@@ -28,10 +28,40 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const SITE_URL = "https://curiosity-cloud.vercel.app";
+const SITE_TITLE = "Curiosity Cloud - Energy · AI · Cloud";
+const SITE_DESCRIPTION =
+  "India's AI buildout is not short of chips. It is short of firm, clean, round-the-clock power. Curiosity contracts the energy, builds the campuses, and runs the cloud on top, one company, one stack, one invoice.";
+
 export const metadata: Metadata = {
-  title: "Curiosity Cloud — Energy · AI · Cloud",
-  description:
-    "India's AI buildout is not short of chips. It is short of firm, clean, round-the-clock power. Curiosity contracts the energy, builds the campuses, and runs the cloud on top.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: "Curiosity Cloud",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/curiosity-og-image.png",
+        width: 1200,
+        height: 630,
+        alt: SITE_TITLE,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/curiosity-og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -53,7 +53,7 @@ export function Hero() {
             }}
           >
             <Image
-              src="/curiosity-cloud-hero.png"
+              src="/curiosity-stack.png"
               alt="Curiosity Cloud"
               fill
               style={{ objectFit: "contain" }}
@@ -87,13 +87,13 @@ export function Hero() {
           className="hidden min-[769px]:block"
           style={{
             position: "relative",
-            width: "100%",
+            width: "90%",
             aspectRatio: "1 / 1",
-            marginTop: "-180px",
+            marginTop: "-100px",
           }}
         >
           <Image
-            src="/curiosity-cloud-hero.png"
+            src="/curiosity-stack.png"
             alt="Curiosity Cloud"
             fill
             style={{ objectFit: "contain" }}
