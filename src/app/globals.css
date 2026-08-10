@@ -399,6 +399,20 @@ body > .nav {
   text-underline-offset: 3px;
 }
 
+.announce-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.announce-text {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* ================================================================== *
  *  Navigation
  * ================================================================== */
@@ -409,7 +423,7 @@ body > .nav {
   display: flex;
   align-items: center;
   gap: 26px;
-  padding: 12px clamp(14px, 2.4vw, 26px);
+  padding: 12px clamp(44px, 5vw, 80px);
   margin: 0;
   border-radius: 0;
   background: var(--glass-bg-strong);
@@ -1980,9 +1994,19 @@ body > .nav {
     font-size: 12px;
   }
   .announce {
+    flex-wrap: nowrap;
+    justify-content: space-between;
     font-size: 12px;
     gap: 8px;
     padding: 8px 14px;
+  }
+  .announce-row {
+    flex: 1;
+    min-width: 0;
+  }
+  .announce a {
+    flex: none;
+    white-space: nowrap;
   }
   .instrument tbody th {
     width: 38%;
