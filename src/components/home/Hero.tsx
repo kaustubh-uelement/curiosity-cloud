@@ -89,7 +89,7 @@ export function Hero() {
             position: "relative",
             width: "90%",
             aspectRatio: "1 / 1",
-            marginTop: "-100px",
+            marginTop: "-120px",
           }}
         >
           <Image
