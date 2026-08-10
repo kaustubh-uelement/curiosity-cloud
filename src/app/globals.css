@@ -645,6 +645,21 @@ body > .nav {
   gap: clamp(30px, 4vw, 64px);
   align-items: center;
 }
+.hero-stack-image {
+  animation: hero-stack-float 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes hero-stack-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
 .hero-copy h1 {
   font-size: clamp(38px, 5vw, 68px);
   font-weight: 600;

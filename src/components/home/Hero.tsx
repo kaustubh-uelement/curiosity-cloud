@@ -53,6 +53,7 @@ export function Hero() {
             }}
           >
             <Image
+              className="hero-stack-image"
               src="/curiosity-stack.png"
               alt="Curiosity Cloud"
               fill
@@ -93,6 +94,7 @@ export function Hero() {
           }}
         >
           <Image
+            className="hero-stack-image"
             src="/curiosity-stack.png"
             alt="Curiosity Cloud"
             fill
