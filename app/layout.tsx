@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Curiosity Cloud — Infrastructure Layer for India's AI Economy",
+  title: "Curiosity Cloud | Infrastructure Layer for India's AI Economy",
   description: "The infrastructure layer for India's AI economy. Energy, data centres and cloud built as one system.",
 };
 

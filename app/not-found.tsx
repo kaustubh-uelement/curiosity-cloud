@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CTA } from "@/components/CTA";
 
 export const metadata = {
-  title: "404 Not Found — Curiosity Cloud",
+  title: "404 Not Found | Curiosity Cloud",
   description: "This route has no power."
 };
 

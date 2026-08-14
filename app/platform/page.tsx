@@ -10,7 +10,7 @@ import { CTA } from "@/components/CTA";
 import { PRODUCTS, PLANES, COMMITMENTS } from "@/lib/data";
 
 export const metadata = {
-  title: "Platform — Curiosity Cloud",
+  title: "Platform | Curiosity Cloud",
   description: "One stack, from the substation to the token."
 };
 

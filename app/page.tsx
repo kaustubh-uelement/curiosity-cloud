@@ -22,7 +22,7 @@ export default function HomePage() {
               AI is <span className="b">power</span> before it is <span className="b2">compute.</span>
             </h1>
             <p className="lede">
-              Curiosity builds the energy, the data centres and the cloud as one system — so capacity lands on your timeline, not the grid&apos;s.
+              Curiosity builds the energy, the data centres and the cloud as one system, so capacity lands on your timeline, not the grid&apos;s.
             </p>
             <div className="hero-actions">
               <Link className="btn btn-primary" href="/contact">
@@ -56,7 +56,7 @@ export default function HomePage() {
               <>
                 <h2>Chips Are Not The Bottleneck Anymore</h2>
                 <p className="note">
-                  Accelerators ship in months. Power, land and interconnection take years — and they decide when a cluster actually turns on.
+                  Accelerators ship in months. Power, land and interconnection take years, and they decide when a cluster actually turns on.
                 </p>
               </>
             }
@@ -74,7 +74,7 @@ export default function HomePage() {
           <Eyebrow>The thesis</Eyebrow>
           <h2>Current To Chip To Cloud, Under One Roof</h2>
           <p className="note" style={{ maxWidth: 520, marginTop: 26 }}>
-            Most providers rent one layer of this and buy the rest. We hold all three, which is why we can commit to a date — and to what the power behind it costs.
+            Most providers rent one layer of this and buy the rest. We hold all three, which is why we can commit to a date, and to what the power behind it costs.
           </p>
           <div className="flow">
             <div className="flow-step">
@@ -108,7 +108,7 @@ export default function HomePage() {
               <>
                 <h2>Four Products, One Control Plane</h2>
                 <p className="note">
-                  Energy, sites, clusters and endpoints share a single management plane — so a quota change, a rack build and a power schedule are the same conversation.
+                  Energy, sites, clusters and endpoints share a single management plane, so a quota change, a rack build and a power schedule are the same conversation.
                 </p>
               </>
             }
@@ -185,7 +185,7 @@ curiosity usage energy --job train-7b-0812`}
             <div className="card stat">
               <span className="k">Clean build-out</span>
               <h3>50 GW+</h3>
-              <p>Annual clean capacity now being added — the raw material for behind-the-meter AI supply.</p>
+              <p>Annual clean capacity now being added: the raw material for behind-the-meter AI supply.</p>
             </div>
             <div className="card stat">
               <span className="k">Ten-year need</span>

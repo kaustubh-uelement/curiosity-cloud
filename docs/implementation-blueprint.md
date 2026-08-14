@@ -517,7 +517,7 @@ The next agent should follow this sequenced execution roadmap:
 1. **Root Layout (`app/layout.tsx`):**
    - Include `Header` and `Footer`.
    - Wrap main content in `.cc-root`.
-   - Set metadata title: `"Curiosity Cloud — Infrastructure Layer for India's AI Economy"`.
+   - Set metadata title: `"Curiosity Cloud | Infrastructure Layer for India's AI Economy"`.
 2. **Home Page (`app/page.tsx`):**
    - Assemble Hero, Logos, Problem, Thesis, Platform, Getting Started, and Why India sections. Include `CTA`.
 3. **Platform Pages (`app/platform/page.tsx` & `app/platform/[slug]/page.tsx`):**

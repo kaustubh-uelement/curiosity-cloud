@@ -8,7 +8,7 @@ import { Card } from "@/components/Card";
 import { CTA } from "@/components/CTA";
 
 export const metadata = {
-  title: "Company — Curiosity Cloud",
+  title: "Company | Curiosity Cloud",
   description: "The infrastructure layer for India's AI economy."
 };
 
@@ -25,7 +25,7 @@ export default function CompanyPage() {
       <PageHead
         eyebrow="Company"
         title="The infrastructure layer for India's AI economy."
-        lede="Founded by operators who have built energy assets and scaled physical businesses in India — and who think the AI build-out will be decided by power, not procurement."
+        lede="Founded by operators who have built energy assets and scaled physical businesses in India, and who think the AI build-out will be decided by power, not procurement."
       />
       <Rule />
       <section>
@@ -37,7 +37,7 @@ export default function CompanyPage() {
                 India will add AI load to a grid already growing faster than almost any other on earth. Peak demand crossed 257 GW in 2026 and is expected to approach 425 GW by the middle of the next decade. Against that backdrop, a gigawatt-class AI campus is not a real-estate project. It is an energy project with servers in it.
               </p>
               <p>
-                The usual approach is to build the data centre and buy power later. That works until the interconnection queue, the evening ramp or a tariff revision arrives — and then the most expensive assets in the building sit idle waiting for electrons.
+                The usual approach is to build the data centre and buy power later. That works until the interconnection queue, the evening ramp or a tariff revision arrives, and then the most expensive assets in the building sit idle waiting for electrons.
               </p>
               <p>
                 Curiosity runs the stack the other way round. We contract the supply, build the hall around it, and expose the result as a cloud. Three layers, one owner, and one number to answer for: what delivered compute costs, and what it cost the grid.

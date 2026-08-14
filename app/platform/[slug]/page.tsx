@@ -23,9 +23,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const p = bySlug(slug);
-  if (!p) return { title: "Product Not Found — Curiosity Cloud" };
+  if (!p) return { title: "Product Not Found | Curiosity Cloud" };
   return {
-    title: `${p.name} — Curiosity Cloud`,
+    title: `${p.name} | Curiosity Cloud`,
     description: p.blurb
   };
 }
@@ -45,7 +45,7 @@ export default async function ProductDetailPage({ params }: Props) {
         lede={p.lede}
         title={
           <>
-            {p.name} <span className="b">— {p.tagline}</span>
+            {p.name} <span className="b">: {p.tagline}</span>
           </>
         }
       />

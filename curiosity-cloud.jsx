@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 
 /* =====================================================================
-   Curiosity Cloud — single-file React site.
+   Curiosity Cloud: single-file React site.
    Same theme as the static build: white + blue, framed layout, hairline
    rules with + markers, mono utility labels, dithered-terrain canvas.
    Hash routed: #/, #/platform, #/platform/<slug>, #/solutions, #/company,
@@ -9,7 +9,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
    ===================================================================== */
 
 const CSS = `@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap');
-/* Curiosity — shared stylesheet
+/* Curiosity: shared stylesheet
    Type: Inter Tight (display) · Inter (body) · JetBrains Mono (utility)
    ------------------------------------------------------------------ */
 
@@ -497,7 +497,7 @@ const PRODUCTS = [
   {
     slug: "cloud", key: "Cloud", name: "GPU Cloud", tagline: "clusters you can actually get",
     blurb: "On-demand and reserved accelerator clusters with InfiniBand fabric, managed Slurm and Kubernetes, and high-throughput parallel storage.",
-    lede: "Reserved and on-demand accelerator capacity in Indian regions, with the fabric, storage and scheduling large training runs need — and a power position behind every rack.",
+    lede: "Reserved and on-demand accelerator capacity in Indian regions, with the fabric, storage and scheduling large training runs need, and a power position behind every rack.",
     kicker: "Product / Cloud",
     caps: [
       ["Reserved pools", "Contract capacity for six to thirty-six months, then carve clusters out of it yourself as projects start and finish.", "chip"],
@@ -535,7 +535,7 @@ const PRODUCTS = [
   {
     slug: "ai-factories", key: "Sites", name: "AI Factories", tagline: "halls built for the load, not retrofitted",
     blurb: "Liquid-cooled halls, managed racks and colocation built for high-density AI load, sited where power can actually be delivered.",
-    lede: "Colocation, managed racks and private halls designed around high-density AI load — liquid cooling, heavy power per rack, and a build sequence tied to the energisation date.",
+    lede: "Colocation, managed racks and private halls designed around high-density AI load: liquid cooling, heavy power per rack, and a build sequence tied to the energisation date.",
     kicker: "Product / Sites",
     caps: [
       ["High-density halls", "Direct-to-chip liquid cooling with rear-door heat exchange, engineered well beyond conventional enterprise rack density.", "grid"],
@@ -588,7 +588,7 @@ const COMMITMENTS = [
 ];
 
 const PLANES = [
-  ["Experience", "Console, CLI, API and quotas — what your team touches every day."],
+  ["Experience", "Console, CLI, API and quotas: what your team touches every day."],
   ["Cloud management", "Tenancy, catalogue, entitlements, metering and multi-sided billing."],
   ["Federation control", "Placement and scheduling across sites and providers as one pool."],
   ["Energy intelligence", "Forecasting, dispatch, carbon-free matching and per-job attribution."],
@@ -739,7 +739,7 @@ const CTA = () => (
         <div className="cta-in">
           <Eyebrow dark>Capacity planning starts upstream</Eyebrow>
           <h2>Reserve the power <em>before you reserve the GPUs.</em></h2>
-          <p>Tell us the shape of the workload and the date you need it live. We come back with a site, a power profile and a delivery schedule — not a waitlist position.</p>
+          <p>Tell us the shape of the workload and the date you need it live. We come back with a site, a power profile and a delivery schedule, not a waitlist position.</p>
           <div className="cta-actions">
             <a className="btn btn-light" href="#/contact">Request capacity <span aria-hidden="true">→</span></a>
             <a className="btn btn-outline-light" href="#/docs">Read the docs</a>
@@ -841,7 +841,7 @@ function Home() {
         <div className="frame hero">
           <div className="hero-copy">
             <h1>AI is <span className="b">power</span> before it is <span className="b2">compute.</span></h1>
-            <p className="lede">Curiosity builds the energy, the data centres and the cloud as one system — so capacity lands on your timeline, not the grid's.</p>
+            <p className="lede">Curiosity builds the energy, the data centres and the cloud as one system, so capacity lands on your timeline, not the grid&apos;s.</p>
             <div className="hero-actions">
               <a className="btn btn-primary" href="#/contact">Request capacity <span aria-hidden="true">→</span></a>
               <a className="btn btn-ghost" href="#/docs">View docs <DocIcon /></a>
@@ -865,7 +865,7 @@ function Home() {
           <Eyebrow>The problem</Eyebrow>
           <Split left={<>
             <h2>Chips Are Not The Bottleneck Anymore</h2>
-            <p className="note">Accelerators ship in months. Power, land and interconnection take years — and they decide when a cluster actually turns on.</p>
+            <p className="note">Accelerators ship in months. Power, land and interconnection take years, and they decide when a cluster actually turns on.</p>
           </>}>
             {PROBLEMS.map(([t, b, i], n) => (<Item key={t} n={n + 1} title={t} body={b} icon={i} />))}
           </Split>
@@ -877,7 +877,7 @@ function Home() {
         <div className="frame section">
           <Eyebrow>The thesis</Eyebrow>
           <h2>Current To Chip To Cloud, Under One Roof</h2>
-          <p className="note" style={{ maxWidth: 520, marginTop: 26 }}>Most providers rent one layer of this and buy the rest. We hold all three, which is why we can commit to a date — and to what the power behind it costs.</p>
+          <p className="note" style={{ maxWidth: 520, marginTop: 26 }}>Most providers rent one layer of this and buy the rest. We hold all three, which is why we can commit to a date, and to what the power behind it costs.</p>
           <div className="flow">
             <div className="flow-step"><span className="k">01 · Current</span><h3>Contracted electrons</h3><p>Captive and group-captive renewables, storage and firm supply arranged around the site before a rack is ordered.</p><span className="arrow">↓</span></div>
             <div className="flow-step"><span className="k">02 · Chip</span><h3>Dense halls</h3><p>Direct-to-chip liquid cooling, high-density racks, and a build sequence that follows the energisation schedule.</p><span className="arrow">↓</span></div>
@@ -892,7 +892,7 @@ function Home() {
           <Eyebrow>The platform</Eyebrow>
           <Split left={<>
             <h2>Four Products, One Control Plane</h2>
-            <p className="note">Energy, sites, clusters and endpoints share a single management plane — so a quota change, a rack build and a power schedule are the same conversation.</p>
+            <p className="note">Energy, sites, clusters and endpoints share a single management plane, so a quota change, a rack build and a power schedule are the same conversation.</p>
           </>}>
             <div className="cards two" style={{ marginTop: 0 }}>
               {PRODUCTS.map((p) => (<Card key={p.slug} k={p.key} title={p.name} body={p.blurb} href={"#/platform/" + p.slug} />))}
@@ -927,7 +927,7 @@ function Home() {
           <Eyebrow>Why India, why now</Eyebrow>
           <div className="cards" style={{ marginTop: 34 }}>
             <div className="card stat"><span className="k">Peak demand</span><h3>257 GW</h3><p>Crossed in 2026, heading towards roughly 425 GW by 2035. AI load arrives on top of that curve, not instead of it.</p></div>
-            <div className="card stat"><span className="k">Clean build-out</span><h3>50 GW+</h3><p>Annual clean capacity now being added — the raw material for behind-the-meter AI supply.</p></div>
+            <div className="card stat"><span className="k">Clean build-out</span><h3>50 GW+</h3><p>Annual clean capacity now being added: the raw material for behind-the-meter AI supply.</p></div>
             <div className="card stat"><span className="k">Ten-year need</span><h3>1.5 TW</h3><p>Clean generation required over the next ten to twelve years. Whoever contracts it early builds the cheapest compute.</p></div>
           </div>
         </div>
@@ -980,8 +980,9 @@ function ProductPage({ slug }) {
   if (!p) return <NotFound />;
   return (
     <>
-      <PageHead eyebrow={p.kicker} lede={p.lede}
-        title={<>{p.name} <span className="b">— {p.tagline}</span></>} />
+      <PageHead eyebrow={p.kicker}
+        title={<>{p.name} <span className="b">: {p.tagline}</span></>}
+        lede={p.lede} />
       <Rule />
       <section>
         <div className="frame section">
@@ -1039,8 +1040,9 @@ function Solutions() {
 function Company() {
   return (
     <>
-      <PageHead eyebrow="Company" title="The infrastructure layer for India's AI economy."
-        lede="Founded by operators who have built energy assets and scaled physical businesses in India — and who think the AI build-out will be decided by power, not procurement." />
+      <PageHead eyebrow="Company"
+        title="The infrastructure layer for India's AI economy."
+        lede="Founded by operators who have built energy assets and scaled physical businesses in India, and who think the AI build-out will be decided by power, not procurement." />
       <Rule />
       <section>
         <div className="frame section">
@@ -1048,7 +1050,7 @@ function Company() {
           <Split left={<h2>Energy Is The Defining Constraint</h2>}>
             <div className="prose" style={{ marginTop: 0 }}>
               <p>India will add AI load to a grid already growing faster than almost any other on earth. Peak demand crossed 257 GW in 2026 and is expected to approach 425 GW by the middle of the next decade. Against that backdrop, a gigawatt-class AI campus is not a real-estate project. It is an energy project with servers in it.</p>
-              <p>The usual approach is to build the data centre and buy power later. That works until the interconnection queue, the evening ramp or a tariff revision arrives — and then the most expensive assets in the building sit idle waiting for electrons.</p>
+              <p>The usual approach is to build the data centre and buy power later. That works until the interconnection queue, the evening ramp or a tariff revision arrives, and then the most expensive assets in the building sit idle waiting for electrons.</p>
               <p>Curiosity runs the stack the other way round. We contract the supply, build the hall around it, and expose the result as a cloud. Three layers, one owner, and one number to answer for: what delivered compute costs, and what it cost the grid.</p>
             </div>
           </Split>
@@ -1151,11 +1153,11 @@ function Post({ slug }) {
               <>
                 <p>Ask a team why their cluster is late and the answer is usually “allocation”. Ask the people building the hall it was going into and you get a different answer: the connection agreement, the transformer lead time, and evacuation capacity at the nearest substation.</p>
                 <h2>Two clocks, wildly different speeds</h2>
-                <p>Accelerator procurement runs on a commercial clock — contracts, allocations, shipping. Grid connection runs on a regulatory and physical one: studies, approvals, long-lead equipment, and construction that cannot be compressed by paying more.</p>
+                <p>Accelerator procurement runs on a commercial clock: contracts, allocations, shipping. Grid connection runs on a regulatory and physical one: studies, approvals, long-lead equipment, and construction that cannot be compressed by paying more.</p>
                 <ul>
                   <li>Hardware: order to rack, measured in months.</li>
                   <li>Power: application to energisation, frequently measured in years.</li>
-                  <li>Everything else — land, cooling, fibre — sits between the two and is rarely the binding constraint.</li>
+                  <li>Everything else (land, cooling, fibre) sits between the two and is rarely the binding constraint.</li>
                 </ul>
                 <blockquote>If your site does not already hold a power position, your GPU order is a depreciation schedule with a delivery date attached.</blockquote>
                 <h2>What a power position actually means</h2>
@@ -1213,7 +1215,7 @@ function Docs() {
 
               <h2 id="concepts">Core concepts</h2>
               <Spec rows={[
-                ["Pool", "Capacity you hold — reserved for a term, or drawn on demand."],
+                ["Pool", "Capacity you hold: reserved for a term, or drawn on demand."],
                 ["Cluster", "Nodes carved out of a pool, with a fabric, an image and a scheduler."],
                 ["Region", "A site with its own power profile, fabric domain and storage."],
                 ["Power profile", "The supply arrangement behind a workload, e.g. 24x7-cfe or grid-firm."],
@@ -1259,9 +1261,9 @@ function Docs() {
 
               <h2 id="changelog">Changelog</h2>
               <ul>
-                <li><strong>2026.08</strong> — Per-job energy attribution in the usage API; <code>in-mh-2</code> open for reservations.</li>
-                <li><strong>2026.07</strong> — Managed Kubernetes on reserved pools; dataset cache at the fabric edge.</li>
-                <li><strong>2026.06</strong> — Bring-your-own-weights endpoints; private link into customer VPCs.</li>
+                <li><strong>2026.08</strong>: Per-job energy attribution in the usage API; <code>in-mh-2</code> open for reservations.</li>
+                <li><strong>2026.07</strong>: Managed Kubernetes on reserved pools; dataset cache at the fabric edge.</li>
+                <li><strong>2026.06</strong>: Bring-your-own-weights endpoints; private link into customer VPCs.</li>
               </ul>
             </div>
           </div>
@@ -1278,8 +1280,9 @@ function Contact() {
   const ready = form.name.trim() && form.email.trim();
   return (
     <>
-      <PageHead eyebrow="Request capacity" title="Tell us the shape and the date."
-        lede="An engineer and a power lead read every request. You get a site, a profile and a delivery schedule — or an honest reason we are not the right fit." />
+      <PageHead eyebrow="Request capacity"
+        title="Tell us the shape and the date."
+        lede="An engineer and a power lead read every request. You get a site, a profile and a delivery schedule, or an honest reason we are not the right fit." />
       <Rule />
       <section>
         <div className="frame section">

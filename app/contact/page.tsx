@@ -6,7 +6,7 @@ import { Item } from "@/components/Item";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata = {
-  title: "Contact — Curiosity Cloud",
+  title: "Contact | Curiosity Cloud",
   description: "Tell us the shape and the date."
 };
 
@@ -16,7 +16,7 @@ export default function ContactPage() {
       <PageHead
         eyebrow="Request capacity"
         title="Tell us the shape and the date."
-        lede="An engineer and a power lead read every request. You get a site, a profile and a delivery schedule — or an honest reason we are not the right fit."
+        lede="An engineer and a power lead read every request. You get a site, a profile and a delivery schedule, or an honest reason we are not the right fit."
       />
       <Rule />
       <section>

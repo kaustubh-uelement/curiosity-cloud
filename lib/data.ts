@@ -7,7 +7,7 @@ export const PRODUCTS: Product[] = [
     name: "GPU Cloud",
     tagline: "clusters you can actually get",
     blurb: "On-demand and reserved accelerator clusters with InfiniBand fabric, managed Slurm and Kubernetes, and high-throughput parallel storage.",
-    lede: "Reserved and on-demand accelerator capacity in Indian regions, with the fabric, storage and scheduling large training runs need — and a power position behind every rack.",
+    lede: "Reserved and on-demand accelerator capacity in Indian regions, with the fabric, storage and scheduling large training runs need, and a power position behind every rack.",
     kicker: "Product / Cloud",
     caps: [
       ["Reserved pools", "Contract capacity for six to thirty-six months, then carve clusters out of it yourself as projects start and finish.", "chip"],
@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
     name: "AI Factories",
     tagline: "halls built for the load, not retrofitted",
     blurb: "Liquid-cooled halls, managed racks and colocation built for high-density AI load, sited where power can actually be delivered.",
-    lede: "Colocation, managed racks and private halls designed around high-density AI load — liquid cooling, heavy power per rack, and a build sequence tied to the energisation date.",
+    lede: "Colocation, managed racks and private halls designed around high-density AI load: liquid cooling, heavy power per rack, and a build sequence tied to the energisation date.",
     kicker: "Product / Sites",
     caps: [
       ["High-density halls", "Direct-to-chip liquid cooling with rear-door heat exchange, engineered well beyond conventional enterprise rack density.", "grid"],
@@ -108,7 +108,7 @@ export const COMMITMENTS: [string, string, IconKey][] = [
 ];
 
 export const PLANES: [string, string][] = [
-  ["Experience", "Console, CLI, API and quotas — what your team touches every day."],
+  ["Experience", "Console, CLI, API and quotas: what your team touches every day."],
   ["Cloud management", "Tenancy, catalogue, entitlements, metering and multi-sided billing."],
   ["Federation control", "Placement and scheduling across sites and providers as one pool."],
   ["Energy intelligence", "Forecasting, dispatch, carbon-free matching and per-job attribution."],

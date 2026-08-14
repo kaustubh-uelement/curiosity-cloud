@@ -7,7 +7,7 @@ import { CTA } from "@/components/CTA";
 import { POSTS } from "@/lib/data";
 
 export const metadata = {
-  title: "Blog — Curiosity Cloud",
+  title: "Blog | Curiosity Cloud",
   description: "Notes from building the layer under the models."
 };
 

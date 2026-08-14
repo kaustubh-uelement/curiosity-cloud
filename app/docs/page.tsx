@@ -7,7 +7,7 @@ import { DocsSidebar } from "@/components/DocsSidebar";
 import { DOC_NAV } from "@/lib/data";
 
 export const metadata = {
-  title: "Documentation — Curiosity Cloud",
+  title: "Documentation | Curiosity Cloud",
   description: "From account to first job in about fifteen minutes."
 };
 
@@ -48,7 +48,7 @@ curiosity pools list`}
               <h2 id="concepts">Core concepts</h2>
               <Spec
                 rows={[
-                  ["Pool", "Capacity you hold — reserved for a term, or drawn on demand."],
+                  ["Pool", "Capacity you hold: reserved for a term, or drawn on demand."],
                   ["Cluster", "Nodes carved out of a pool, with a fabric, an image and a scheduler."],
                   ["Region", "A site with its own power profile, fabric domain and storage."],
                   ["Power profile", "The supply arrangement behind a workload, e.g. 24x7-cfe or grid-firm."],
@@ -138,13 +138,13 @@ curl https://api.curiosity.cloud/v1/chat/completions \\
               <h2 id="changelog">Changelog</h2>
               <ul>
                 <li>
-                  <strong>2026.08</strong> — Per-job energy attribution in the usage API; <code>in-mh-2</code> open for reservations.
+                  <strong>2026.08</strong>: Per-job energy attribution in the usage API; <code>in-mh-2</code> open for reservations.
                 </li>
                 <li>
-                  <strong>2026.07</strong> — Managed Kubernetes on reserved pools; dataset cache at the fabric edge.
+                  <strong>2026.07</strong>: Managed Kubernetes on reserved pools; dataset cache at the fabric edge.
                 </li>
                 <li>
-                  <strong>2026.06</strong> — Bring-your-own-weights endpoints; private link into customer VPCs.
+                  <strong>2026.06</strong>: Bring-your-own-weights endpoints; private link into customer VPCs.
                 </li>
               </ul>
             </div>

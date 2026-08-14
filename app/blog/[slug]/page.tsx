@@ -20,9 +20,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const p = POSTS.find((x) => x.slug === slug);
-  if (!p) return { title: "Post Not Found — Curiosity Cloud" };
+  if (!p) return { title: "Post Not Found | Curiosity Cloud" };
   return {
-    title: `${p.title} — Curiosity Cloud Blog`,
+    title: `${p.title} | Curiosity Cloud Blog`,
     description: p.excerpt
   };
 }
@@ -70,12 +70,12 @@ export default async function BlogPostPage({ params }: Props) {
                 </p>
                 <h2>Two clocks, wildly different speeds</h2>
                 <p>
-                  Accelerator procurement runs on a commercial clock — contracts, allocations, shipping. Grid connection runs on a regulatory and physical one: studies, approvals, long-lead equipment, and construction that cannot be compressed by paying more.
+                  Accelerator procurement runs on a commercial clock: contracts, allocations, shipping. Grid connection runs on a regulatory and physical one: studies, approvals, long-lead equipment, and construction that cannot be compressed by paying more.
                 </p>
                 <ul>
                   <li>Hardware: order to rack, measured in months.</li>
                   <li>Power: application to energisation, frequently measured in years.</li>
-                  <li>Everything else — land, cooling, fibre — sits between the two and is rarely the binding constraint.</li>
+                  <li>Everything else (land, cooling, fibre) sits between the two and is rarely the binding constraint.</li>
                 </ul>
                 <blockquote>
                   If your site does not already hold a power position, your GPU order is a depreciation schedule with a delivery date attached.

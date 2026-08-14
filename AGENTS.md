@@ -1,4 +1,4 @@
-# Curiosity Cloud — Development Rules
+# Curiosity Cloud: Development Rules
 
 ## Source of Truth
 

@@ -8,7 +8,7 @@ import { CTA } from "@/components/CTA";
 import { SOLUTIONS } from "@/lib/data";
 
 export const metadata = {
-  title: "Solutions — Curiosity Cloud",
+  title: "Solutions | Curiosity Cloud",
   description: "Different workloads want different power."
 };
 
