@@ -1329,3 +1329,59 @@ nav.main {
 button.btn {
   font-family: "JetBrains Mono", monospace;
 }
+
+/* ---------- intro loader ---------- */
+.intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  background-image: radial-gradient(circle, #e1e4ea 1px, transparent 1.1px);
+  background-size: 9px 9px;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.intro-loader--out {
+  opacity: 0;
+  pointer-events: none;
+}
+.intro-loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+.intro-loader-canvas {
+  display: block;
+}
+.intro-loader-tagline {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11.5px;
+  letter-spacing: -5px;
+  text-transform: uppercase;
+  color: #6a707a;
+  opacity: 0;
+}
+.intro-loader-tagline.is-visible {
+  animation: introTagline 1s ease-in-out forwards;
+}
+@keyframes introTagline {
+  0% {
+    letter-spacing: -5px;
+    opacity: 0;
+  }
+  100% {
+    letter-spacing: 0.16em;
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro-loader-tagline.is-visible {
+    animation: none;
+    opacity: 1;
+    letter-spacing: 0.16em;
+  }
+}
