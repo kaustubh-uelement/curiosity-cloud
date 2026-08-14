@@ -48,7 +48,7 @@ export const Footer = () => (
           </div>
         </div>
         <div className="foot-bar">
-          <span>© 2026 Curiosity · Vaswani Chambers, Worli, Mumbai</span>
+          <span>© {new Date().getFullYear()} Curiosity · Vaswani Chambers, Worli, Mumbai</span>
           <span><span className="dot" />All regions operational</span>
         </div>
       </div>
