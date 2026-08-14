@@ -1,3 +1,72 @@
+# Curiosity Cloud — Development Rules
+
+## Source of Truth
+
+original/curiosity-cloud.jsx is the authoritative source for:
+- UI
+- copy
+- data
+- interactions
+- visual design
+- responsive behavior
+
+Never redesign the source during migration.
+
+## Technology
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- React
+- No UI component library unless explicitly approved
+
+## Design Rule
+
+Pixel fidelity > architectural elegance.
+
+Do not change:
+- colors
+- typography
+- spacing
+- copy
+- layout
+- animations
+- breakpoints
+
+unless the original source explicitly requires it.
+
+## Navigation
+
+Use Next.js routing.
+Never recreate hash-based navigation.
+
+## Components
+
+Prefer reusable components.
+Do not create unnecessary micro-components.
+
+## Client Components
+
+Use "use client" only when browser interactivity requires it.
+
+## Data
+
+Do not duplicate large datasets across components.
+
+## Verification
+
+Every implementation task must finish with:
+
+npm run build
+
+and browser verification when UI is involved.
+
+## Important
+
+Do not say an implementation is complete merely because TypeScript compiles.
+
+The running browser application is the final authority.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
