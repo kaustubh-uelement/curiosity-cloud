@@ -4,13 +4,19 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Script from "next/script";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "https://curiosity-cloud.vercel.app");
+
 export const metadata: Metadata = {
   title: "Curiosity Cloud | Infrastructure Layer for India's AI Economy",
   description:
     "The infrastructure layer for India's AI economy. Energy, data centres and cloud built as one system.",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://curiosity-cloud.vercel.app"
-  ),
+  metadataBase: new URL(siteUrl),
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
