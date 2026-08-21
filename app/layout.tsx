@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "The infrastructure layer for India's AI economy. Energy, data centres and cloud built as one system.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://curiositycloud.in"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://curiosity-cloud.vercel.app"
   ),
   icons: {
     icon: [
