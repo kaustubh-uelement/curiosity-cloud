@@ -8,6 +8,50 @@ export const metadata: Metadata = {
   title: "Curiosity Cloud | Infrastructure Layer for India's AI Economy",
   description:
     "The infrastructure layer for India's AI economy. Energy, data centres and cloud built as one system.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://curiositycloud.in"
+  ),
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  openGraph: {
+    title: "Curiosity Cloud | Infrastructure Layer for India's AI Economy",
+    description:
+      "The infrastructure layer for India's AI economy. Energy, data centres and cloud built as one system.",
+    url: "/",
+    siteName: "Curiosity Cloud",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 2786,
+        height: 1462,
+        alt: "Curiosity Cloud — Infrastructure Layer for India's AI Economy",
+        type: "image/png",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Curiosity Cloud | Infrastructure Layer for India's AI Economy",
+    description:
+      "The infrastructure layer for India's AI economy. Energy, data centres and cloud built as one system.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 2786,
+        height: 1462,
+        alt: "Curiosity Cloud — Infrastructure Layer for India's AI Economy",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

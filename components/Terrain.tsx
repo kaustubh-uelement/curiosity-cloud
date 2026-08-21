@@ -515,9 +515,9 @@ export function Terrain({
 
       const now = performance.now();
       const dt = Math.max(1, now - lastTime);
-      let vx = ((mx - lastMouseX) / dt) * 1000;
-      let vy = ((my - lastMouseY) / dt) * 1000;
-      let speed = Math.hypot(vx, vy);
+      const vx = ((mx - lastMouseX) / dt) * 1000;
+      const vy = ((my - lastMouseY) / dt) * 1000;
+      const speed = Math.hypot(vx, vy);
 
       lastTime = now;
       lastMouseX = mx;

@@ -99,7 +99,7 @@ export function IntroLoader() {
 
     if (reducedMotion) {
       queue.forEach((_, i) => paint(i));
-      setShowTagline(true);
+      requestAnimationFrame(() => setShowTagline(true));
       fadeTimer = setTimeout(() => setFadingOut(true), 1400);
       removeTimer = setTimeout(() => {
         setMounted(false);
